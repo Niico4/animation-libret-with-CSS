@@ -1,0 +1,120 @@
+/* #717171 #f0f0f0 #bababa */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Indie Flower', cursive;
+    display: flex;
+    min-height: 100vh;
+
+}
+
+.book {
+    width: 410px;
+    height: 500px;
+    background-color: #e0e0e4;
+    background-size: 40px 40px;
+    background-image: repeating-linear-gradient(0deg, #000, #000 1.5px, #e0e0e4 1.5px, #e0e0e4);
+    padding: 45px 0 45px 70px;
+    margin: auto;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.book__img {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    right: -50px;
+    position: absolute;
+    transform: rotate(360deg) scale(0);
+    animation: image .5s 5s forwards;
+}
+
+.book__title {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    animation: show 3s forwards;
+}
+
+@keyframes show {
+
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes image {
+    100%{
+        transform: rotate(0) scale(1);
+    }
+}
+
+
+
+.book__paragraph {
+    font-size: 1.3rem;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    animation: show 2s 3s forwards;
+}
+
+.line {
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    background-color: crimson;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    position: absolute;
+    top: 85px;
+    left: 10px;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0 160px, 0 320px;
+}
+
+.line-h {
+    background: rgb(113, 113, 113);
+    background: linear-gradient(270deg, rgba(113, 113, 113, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(186, 186, 186, 1) 100%);
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    top: 95px;
+    left: -25px;
+    border-radius: 50px;
+}
+
+.line-h::before{
+    content: "";
+    background: rgb(113, 113, 113);
+    background: linear-gradient(270deg, rgba(113, 113, 113, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(186, 186, 186, 1) 100%);
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    top: 160px;
+    border-radius: 50px;
+}
+
+
+.line-h::after{
+    content: "";
+    background: rgb(113, 113, 113);
+    background: linear-gradient(270deg, rgba(113, 113, 113, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(186, 186, 186, 1) 100%);
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    top: 320px;
+    border-radius: 50px;
+}
